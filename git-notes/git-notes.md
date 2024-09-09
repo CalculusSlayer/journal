@@ -5,8 +5,17 @@ Main documentation: https://git-scm.com/
 This is a brief reference for git commands I found useful.
 I will try to keep the most relevant commands near the top.
 
-
 ## Useful commands
+
+### git reflog
+
+This command lets you see ALL commits you have made on your local repository,
+even if they were written from git history from a git hard reset
+or git restore for example.
+
+`git reflog`
+
+VERY POWERFUL command.
 
 ### git restore
 
@@ -38,13 +47,51 @@ not in your git log but in git reflog are all fair game.
 
 https://git-scm.com/docs/git-restore
 
-### git reflog
+### git reset
 
-`git reflog`
+There are 3 different types or reset you can do:
+1) soft: leaves working directory untouched, leaves index untouched, moves commit pointer to whatever specified
+2) mixed: leaves working directory untouched, clears index, moves commit pointer to whatever specified
+3) hard: changes working directory, clears the index, moves commit pointer to whatever specified
 
-This command lets you see ALL commits you have made on your local repository,
-even if they were written from git history from a git hard reset for example.
+### git difftool
+TODO: 
+- Add example commands
+- Add instructions on how to set up
 
-VERY POWERFUL command.
+This commands opens up a visual tool so you can compare
+different commits. It is basically the GUI version
+of `git diff`.
 
-### 
+You may have to do some setup prior to using this.
+
+https://git-scm.com/docs/git-difftool
+
+### git mergetool
+
+This command opens up a visual tool so you can safely
+merge different branches and hopefull solve your
+merge conflict. It is basically the GUI version
+of `git merge`.
+
+You may have to do some setup prior to using this.
+
+https://git-scm.com/docs/git-mergetool
+
+## Notes
+
+### 3 similar commands: git-revert, git-restore, git-reset
+
+`git revert` is about making a new commit that reverts the changes made by other commits.
+
+`git restore` is about restoring files in the working tree from either the index
+or another commit
+
+`git reset` is about updating your branch, moving the commit pointer in to add or remove
+commits from the branch. This operation changes the commit history.
+
+https://stackoverflow.com/questions/58003030/what-is-git-restore-and-how-is-it-different-from-git-reset
+
+## Resources
+
+Official git book: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
