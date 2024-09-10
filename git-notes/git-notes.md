@@ -53,7 +53,14 @@ not in your git log but in git reflog are all fair game.
 
 This is a powerful command that allows you to
 rename a file or folder without lose git history
-associated with it.
+associated with it*.
+
+* \*Git difftool may start acting up once you run this
+(git diff works no problem). So instead after this you
+might have to rely on the git lens vscode extension
+or try:   `git difftool --find-renames`. This command
+forces git to find the renames and correctly map
+the same files.
 
 `git mv {previous name} {new name}`
 
