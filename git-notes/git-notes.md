@@ -78,6 +78,25 @@ You may have to do some setup prior to using this.
 
 https://git-scm.com/docs/git-mergetool
 
+### git checkout
+
+This checkout is for creating/switching to different branches in your repository.
+
+Ex: `git checkout -b feature_branch`
+
+This commands creates a new branch called "feature_branch" and switches over to it.
+
+`git checkout feature_branch2`
+
+This command on the other hand switches to the branch called "feature_branch2" only
+if it exists. If it does not exist, an error will be thrown.
+
+`git checkout --detached {commit hash}`
+
+This command switches to a new branch in a "detached state". Basically changes and commits
+will not be saved once you exit this branch. It is used for quickly checking something out.
+
+
 ## Notes
 
 ### 3 similar commands: git-revert, git-restore, git-reset
