@@ -7,7 +7,7 @@ I will try to keep the most relevant commands near the top.
 
 ## Useful commands
 
-### git reflog
+### [git reflog](https://git-scm.com/docs/git-reflog)
 
 This command lets you see ALL commits you have made on your local repository,
 even if they were written from git history from a git hard reset
@@ -15,9 +15,11 @@ or git restore for example.
 
 `git reflog`
 
-VERY POWERFUL command.
+***VERY POWERFUL command.***
 
-### git restore
+***
+
+### [git restore](https://git-scm.com/docs/git-restore)
 
 i use this to restore a particular file to a different version in a previous
 (or sometimes in a future commit).
@@ -45,17 +47,53 @@ Here is a more general form. Note you can type in the
 full commit hash instead of doing HEAD~x. Also commit hashes
 not in your git log but in git reflog are all fair game.
 
-https://git-scm.com/docs/git-restore
+***
 
-### git reset
+### [git mv](https://git-scm.com/docs/git-mv)
+
+This is a powerful command that allows you to
+rename a file or folder without lose git history
+associated with it.
+
+`git mv {previous name} {new name}`
+
+After running this command, the file/directory will be staged and
+ready to be committed for the next commit.
+
+***
+
+### [git rm](https://git-scm.com/docs/git-rm)
+
+
+`git rm {file name}`
+
+This is a command used to remove file/directory
+from both your remote repository and working directory
+
+In order to remove from the remote directory but not
+from your working directory, do:
+
+`git rm --cached {file name}`
+
+The above effectively allowed you to remove something you
+accidentally pushed to remote. After running this,
+the deleted file will be staged and ready to be committed.
+
+***
+
+### [git reset](https://git-scm.com/docs/git-reset)
+
+**TODO:** Add more documentation here regarding the specific commands and examples.
 
 There are 3 different types or reset you can do:
 1) soft: leaves working directory untouched, leaves index untouched, moves commit pointer to whatever specified
 2) mixed: leaves working directory untouched, clears index, moves commit pointer to whatever specified
 3) hard: changes working directory, clears the index, moves commit pointer to whatever specified
 
-### git difftool
-TODO: 
+***
+
+### [git difftool](https://git-scm.com/docs/git-difftool)
+**TODO**: 
 - Add example commands
 - Add instructions on how to set up
 
@@ -65,9 +103,12 @@ of `git diff`.
 
 You may have to do some setup prior to using this.
 
-https://git-scm.com/docs/git-difftool
+***
 
-### git mergetool
+### [git mergetool](https://git-scm.com/docs/git-mergetool)
+**TODO**: 
+- Add example commands
+- Add instructions on how to set up
 
 This command opens up a visual tool so you can safely
 merge different branches and hopefull solve your
@@ -76,9 +117,9 @@ of `git merge`.
 
 You may have to do some setup prior to using this.
 
-https://git-scm.com/docs/git-mergetool
+***
 
-### git checkout
+### [git checkout](https://git-scm.com/docs/git-checkout)
 
 This checkout is for creating/switching to different branches in your repository.
 
@@ -96,6 +137,7 @@ if it exists. If it does not exist, an error will be thrown.
 This command switches to a new branch in a "detached state". Basically changes and commits
 will not be saved once you exit this branch. It is used for quickly checking something out.
 
+***
 
 ## Notes
 
