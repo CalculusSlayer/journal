@@ -151,7 +151,7 @@ will not be saved once you exit this branch. It is used for quickly checking som
 The `git stash` command is used to temporary throw away dirty code temporarily and
 later recover if needed.
 
-`git stash push -- {name of file} -m {commit message}`
+`git stash push -m {commit message} -- {name of file}`
 
 This version of the command for example stashes just one file and has a specific commit message.
 
