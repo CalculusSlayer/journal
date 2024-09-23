@@ -128,7 +128,7 @@ You may have to do some setup prior to using this.
 
 ### [git checkout](https://git-scm.com/docs/git-checkout)
 
-This checkout is for creating/switching to different branches in your repository.
+Git checkout is for creating/switching to different branches in your repository.
 
 Ex: `git checkout -b feature_branch`
 
@@ -143,6 +143,31 @@ if it exists. If it does not exist, an error will be thrown.
 
 This command switches to a new branch in a "detached state". Basically changes and commits
 will not be saved once you exit this branch. It is used for quickly checking something out.
+
+***
+
+### [git stash](https://git-scm.com/docs/git-stash)
+
+The `git stash` command is used to temporary throw away dirty code temporarily and
+later recover if needed.
+
+`git stash push -- {name of file} -m {commit message}`
+
+This version of the command for example stashes just one file and has a specific commit message.
+
+`git stash pop "{stash id}"`
+
+This command applies version of the file/files onto your working directory and
+pops from stack.
+
+`git stash apply "{stash id}"`
+
+This command also applies version of the file/files onto your working directory
+but does not pop from the stack.
+
+`git stash list`
+
+This command is used to see all your stashes in your local repository.
 
 ***
 
